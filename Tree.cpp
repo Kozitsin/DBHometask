@@ -15,12 +15,12 @@ void Tree::AddRecord(int parent, Record record)
 
 void Tree::Print()
 {
-	for (size_t i = 0; i  < tree.size(); i++)
+	for (size_t i = 0; i < tree.size(); i++)
 	{
 		std::cout << "Name: " << tree[i].name << std::endl;
 		for (size_t j = 0; j < tree[i].children.size(); j++)
 		{
-			std::cout << "Name: " << tree[j].name << '\t';
+			std::cout << "Name: " << tree[tree[i].children[j]].name << '\t';
 		}
 		std::cout << std::endl;
 	}
